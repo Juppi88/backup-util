@@ -2,6 +2,8 @@
 
 This is a collection of Bash scripts to help with backing up data to a folder on the local system. The backup files should then be copied onto a remote system by using e.g. `scp`.
 
+These scripts should always be run as the root user as they require read access to the folders to be backed up.
+
 ## Configuration
 
 The repository contains a sample configuration in _cfg/SAMPLE_. Copy the files in _cfg/SAMPLE_ into _cfg/_ and edit them for your purposes.
@@ -10,7 +12,7 @@ __*NOTE:*__ Ensure these configuration files are only readable by the root user 
 
 ### Backup files
 
-By editing _cfg/paths.txt_ you can specify which folders you would like include in the backup Certain folders can be excluded from the backup by adding them into _cfg/excludes.txt_. File backup is invoked by running `backup.sh files`.
+By editing _cfg/paths.txt_ you can specify which folders you would like to include in the backup. Certain folders can be excluded from the backup by adding them into _cfg/excludes.txt_. File backup can be invoked by running `backup.sh files`.
 
 ### Backup databases
 
