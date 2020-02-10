@@ -18,7 +18,7 @@ function backup_files()
 	done
 
 	# Run the archive command.
-	tar -czf "$1/files-latest.tar.gz" $excludes $backup_paths
+	tar $excludes -czf "$1/files-latest.tar.gz" $backup_paths
 
 	# Ensure the target user can read the backup files.
 	update_permissions $2 $1
