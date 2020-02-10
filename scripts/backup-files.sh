@@ -10,11 +10,11 @@ function backup_files()
 
 	echo -e "Backing up files into archive $1/files-latest.tar.gz (user: $2)..."
 
-	local excludes="--exclude='$1'"
+	local excludes="--exclude=$1"
 
 	for dir in $backup_excludes
 	do
-		excludes="$excludes --exclude='$dir'"
+		excludes="$excludes --exclude=$dir"
 	done
 
 	# Run the archive command.
