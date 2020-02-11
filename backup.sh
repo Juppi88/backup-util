@@ -14,6 +14,9 @@ if [ $# -eq 0 ]; then
 	exit 0
 fi
 
+# Set working directory to the location of this script.
+cd "$(dirname "$0")";
+
 source scripts/read-cfg.sh
 source scripts/backup-files.sh
 source scripts/backup-databases.sh
